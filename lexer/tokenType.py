@@ -42,4 +42,6 @@ class TokenType:
     TRUE = 34
     WHILE = 35
 
-    EOF = 36
+    INDENT = 36
+
+    EOF = 37

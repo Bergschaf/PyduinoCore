@@ -41,7 +41,7 @@ DOUBLE_CHAR_TOKENS = {
     '<=': TokenType.LESS_EQUAL
 }
 
-KEYWORDS = {
+KEYWORD_TOKENS = {
     'and': TokenType.AND,
     'def': TokenType.DEF,
     'else': TokenType.ELSE,
