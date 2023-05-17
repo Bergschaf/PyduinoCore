@@ -46,17 +46,3 @@ class PyduinoErrorHandling:
     @staticmethod
     def add_error(error: PyduinoErrorHandling):
         PyduinoErrorHandling.Instance.errors.append(error)
-
-    @staticmethod
-    def error_handling(function: Callable):
-        """
-        Decorator for error handling
-        """
-        def wrapper(*args, **kwargs):
-            try:
-                return function(*args, **kwargs)
-            except PyduinoError as e:
-                PyduinoErrorHandling.add_error(e)
-                return None
-
-        return wrapper

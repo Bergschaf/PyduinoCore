@@ -1,6 +1,7 @@
 from typing import List
 
 from token import Token, SINGLE_CHAR_TOKENS, DOUBLE_CHAR_TOKENS, KEYWORD_TOKENS, TokenType
+from error import PyduinoError, PyduinoSyntaxError, PyduinoNameError, PyduinoTypeError, PyduinoValueError
 
 
 class Lexer:
@@ -71,4 +72,7 @@ class Lexer:
         i += 1
         while i < len(line) and line[i] != '"':
             i += 1
+
+        if i >= len(line):
+
         return Token(TokenType.STRING, line[start:i])

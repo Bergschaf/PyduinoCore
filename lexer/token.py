@@ -1,4 +1,5 @@
 from typing import Optional
+from location import Range, Position
 from tokenType import TokenType
 
 
@@ -7,7 +8,7 @@ class Token:
     Token class, is instantiated in the lexer
     """
 
-    def __init__(self, type: int, value: Optional[str] = None):
+    def __init__(self, type: int, location: Range, value: Optional[str] = None):
         self.type = type
         self.value = value
 

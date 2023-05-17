@@ -1,0 +1,5 @@
+Überlegung:
+Error Handling mit decorator, der die funktion in einem try block ausführt
+
+
+Error Klasse als Sinlgeton -> Parser kann nur eine Instanz haben
